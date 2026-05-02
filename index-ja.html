@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Follicea Technologies — 京都発バイオテック</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0f2236;
+      --navy-mid: #1a3a52;
+      --teal: #2a7f74;
+      --teal-light: #3a9d91;
+      --teal-pale: #e8f5f3;
+      --cream: #f8f7f4;
+      --white: #ffffff;
+      --ink: #1a1a1a;
+      --charcoal: #37352f;
+      --slate: #5d5b54;
+      --steel: #888680;
+      --hairline: #e5e2dd;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Yu Gothic UI', sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--hairline);
+      height: 64px; display: flex; align-items: center;
+    }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; width: 100%; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo img { height: 36px; display: block; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--charcoal); font-size: 14px; font-weight: 500; padding: 8px 12px; border-radius: var(--radius-sm); transition: background 0.15s, color 0.15s; }
+    .nav-links a:hover { background: var(--cream); color: var(--teal); }
+    .nav-lang { display: flex; align-items: center; gap: 4px; }
+    .lang-btn { font-size: 13px; font-weight: 500; padding: 6px 12px; border-radius: var(--radius-sm); border: 1px solid var(--hairline); background: transparent; color: var(--slate); cursor: pointer; text-decoration: none; transition: background 0.15s, color 0.15s, border-color 0.15s; }
+    .lang-btn.active, .lang-btn:hover { background: var(--teal); color: var(--white); border-color: var(--teal); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--charcoal); border-radius: 2px; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 130px 32px 110px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 580px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-bg {
+      position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 55% at 50% -10%, rgba(42,127,116,0.30) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 40% at 82% 70%, rgba(42,127,116,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 35% at 18% 75%, rgba(58,157,145,0.08) 0%, transparent 55%);
+    }
+    .hero-content { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; }
+    .hero-tag {
+      display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase; color: var(--teal-light);
+      border: 1px solid rgba(58,157,145,0.45); border-radius: 999px;
+      padding: 5px 16px; margin-bottom: 28px;
+    }
+    .hero h1 { font-size: clamp(32px, 4.5vw, 56px); font-weight: 700; line-height: 1.25; margin: 0 auto 24px; }
+    .hero h1 em { font-style: normal; color: var(--teal-light); }
+    .hero-sub { font-size: 17px; font-weight: 400; color: rgba(255,255,255,0.68); max-width: 580px; margin: 0 auto 48px; line-height: 1.95; }
+    .hero-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+
+    /* ── BUTTONS ── */
+    .btn-primary { background: var(--teal); color: var(--white); font-size: 14px; font-weight: 600; padding: 13px 28px; border-radius: var(--radius-md); text-decoration: none; border: none; cursor: pointer; transition: background 0.15s; }
+    .btn-primary:hover { background: var(--teal-light); }
+    .btn-outline { background: transparent; color: var(--white); font-size: 14px; font-weight: 500; padding: 12px 28px; border-radius: var(--radius-md); text-decoration: none; border: 1px solid rgba(255,255,255,0.35); transition: background 0.15s, border-color 0.15s; }
+    .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.55); }
+
+    /* ── SECTIONS ── */
+    section { padding: 96px 32px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+    .section-title { font-size: clamp(26px, 3vw, 40px); font-weight: 700; line-height: 1.25; color: var(--navy); margin-bottom: 20px; }
+    .section-body { font-size: 16px; color: var(--slate); line-height: 1.85; max-width: 640px; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--cream); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 56px; }
+    .about-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .stat-card { background: var(--white); border: 1px solid var(--hairline); border-radius: var(--radius-lg); padding: 28px 24px; }
+    .stat-number { font-size: 32px; font-weight: 700; color: var(--teal); letter-spacing: -1px; line-height: 1; margin-bottom: 8px; font-family: 'Inter', sans-serif; }
+    .stat-label { font-size: 13px; color: var(--slate); font-weight: 500; }
+
+    /* ── TECHNOLOGY ── */
+    #technology { background: var(--white); }
+    .tech-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .tech-card { border: 1px solid var(--hairline); border-radius: var(--radius-lg); padding: 32px 28px; transition: box-shadow 0.2s, transform 0.2s; }
+    .tech-card:hover { box-shadow: 0 8px 32px rgba(15,34,54,0.08); transform: translateY(-2px); }
+    .tech-icon { width: 48px; height: 48px; background: var(--teal-pale); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .tech-icon svg { width: 24px; height: 24px; stroke: var(--teal); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .tech-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .tech-card p { font-size: 14px; color: var(--slate); line-height: 1.75; }
+    .tech-more-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 48px; font-size: 14px; font-weight: 600;
+      color: var(--teal); text-decoration: none;
+      border: 1px solid var(--teal); border-radius: var(--radius-md);
+      padding: 11px 22px; transition: background 0.15s, color 0.15s;
+    }
+    .tech-more-link:hover { background: var(--teal); color: var(--white); }
+
+    /* ── TEAM ── */
+    #team { background: var(--cream); }
+    .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 56px; }
+    .team-card {
+      background: var(--white); border: 1px solid var(--hairline);
+      border-radius: var(--radius-lg); padding: 36px 28px; text-align: center;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .team-card:hover { box-shadow: 0 8px 28px rgba(15,34,54,0.07); transform: translateY(-2px); }
+    .team-avatar { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 700; color: var(--white); font-family: 'Inter', sans-serif; }
+    .avatar-a { background: linear-gradient(135deg, var(--navy), var(--navy-mid)); }
+    .avatar-b { background: linear-gradient(135deg, var(--teal), var(--teal-light)); }
+    .avatar-c { background: linear-gradient(135deg, #2d5a8e, #3a7abd); }
+    .team-card h3 { font-size: 17px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+    .team-role { font-size: 13px; font-weight: 600; color: var(--teal); margin-bottom: 14px; }
+    .team-bio { font-size: 13px; color: var(--slate); line-height: 1.8; }
+    .team-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 16px; }
+    .team-tag { font-size: 11px; font-weight: 500; color: var(--slate); background: var(--cream); border: 1px solid var(--hairline); border-radius: 999px; padding: 3px 10px; }
+
+    /* ── NEWS ── */
+    #news { background: var(--white); }
+    .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+    .news-card { background: var(--white); border: 1px solid var(--hairline); border-radius: var(--radius-lg); padding: 28px; display: flex; flex-direction: column; gap: 10px; transition: box-shadow 0.2s; }
+    .news-card:hover { box-shadow: 0 4px 20px rgba(15,34,54,0.07); }
+    .news-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; color: var(--teal); background: var(--teal-pale); border-radius: var(--radius-sm); padding: 3px 9px; align-self: flex-start; }
+    .news-date { font-size: 12px; color: var(--steel); font-family: 'Inter', sans-serif; }
+    .news-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); line-height: 1.5; }
+    .news-card p { font-size: 13px; color: var(--slate); line-height: 1.75; flex: 1; }
+    .news-link { font-size: 13px; font-weight: 600; color: var(--teal); text-decoration: none; margin-top: auto; }
+    .news-link:hover { color: var(--teal-light); }
+
+    /* ── CONTACT BANNER ── */
+    .contact-banner { background: var(--navy); color: var(--white); padding: 80px 32px; text-align: center; }
+    .contact-banner h2 { font-size: clamp(22px, 2.8vw, 36px); font-weight: 700; margin-bottom: 16px; line-height: 1.35; }
+    .contact-banner p { font-size: 16px; color: rgba(255,255,255,0.65); max-width: 480px; margin: 0 auto 36px; line-height: 1.9; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--white); border-top: 1px solid var(--hairline); padding: 40px 32px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+    .footer-logo img { height: 28px; opacity: 0.75; }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-size: 13px; color: var(--steel); text-decoration: none; }
+    .footer-links a:hover { color: var(--teal); }
+    .footer-copy { font-size: 12px; color: var(--steel); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .tech-cards, .news-grid, .team-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    @media (max-width: 640px) {
+      .tech-cards, .news-grid, .team-grid { grid-template-columns: 1fr; }
+      .about-stat-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: var(--white); border-bottom: 1px solid var(--hairline); padding: 16px; gap: 4px; }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+      section { padding: 64px 20px; }
+      .hero { padding: 90px 20px 80px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index-ja.html">
+      <img src="Brand_assets/FolliceaTech_透明ロゴ.png" alt="Follicea Technologies" />
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index-ja.html">ホーム</a></li>
+      <li><a href="#about">会社概要</a></li>
+      <li><a href="#technology">テクノロジー</a></li>
+      <li><a href="#team">チーム</a></li>
+      <li><a href="#news">ニュース</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:12px;">
+      <div class="nav-lang">
+        <a class="lang-btn" href="index.html">EN</a>
+        <a class="lang-btn active" href="index-ja.html">JP</a>
+      </div>
+      <div class="hamburger" id="hamburger" aria-label="メニュー" role="button" tabindex="0">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <svg style="position:absolute;inset:0;width:100%;height:100%;" viewBox="0 0 1200 580" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="rgba(58,157,145,0.18)" stroke-width="1" fill="none">
+        <line x1="120" y1="480" x2="320" y2="380"/>
+        <line x1="320" y1="380" x2="520" y2="430"/>
+        <line x1="520" y1="430" x2="680" y2="310"/>
+        <line x1="120" y1="480" x2="220" y2="300"/>
+        <line x1="220" y1="300" x2="400" y2="200"/>
+        <line x1="1050" y1="100" x2="920" y2="200"/>
+        <line x1="920" y1="200" x2="1080" y2="310"/>
+        <line x1="1080" y1="310" x2="950" y2="400"/>
+        <line x1="950" y1="400" x2="1100" y2="480"/>
+        <line x1="400" y1="200" x2="520" y2="430"/>
+        <line x1="680" y1="310" x2="920" y2="200"/>
+        <line x1="920" y1="200" x2="820" y2="80"/>
+        <line x1="820" y1="80" x2="1050" y2="100"/>
+      </g>
+      <g fill="rgba(58,157,145,0.45)">
+        <circle cx="120" cy="480" r="6"/><circle cx="520" cy="430" r="5"/><circle cx="680" cy="310" r="7"/>
+      </g>
+      <g fill="rgba(58,157,145,0.30)">
+        <circle cx="320" cy="380" r="4"/><circle cx="220" cy="300" r="5"/>
+        <circle cx="400" cy="200" r="4"/><circle cx="1050" cy="100" r="6"/><circle cx="820" cy="80" r="5"/>
+      </g>
+      <g fill="rgba(255,255,255,0.20)">
+        <circle cx="920" cy="200" r="8"/><circle cx="1080" cy="310" r="5"/>
+        <circle cx="950" cy="400" r="4"/><circle cx="1100" cy="480" r="6"/>
+      </g>
+      <circle cx="950" cy="300" r="140" fill="none" stroke="rgba(42,127,116,0.10)" stroke-width="1.5"/>
+      <circle cx="950" cy="300" r="100" fill="none" stroke="rgba(42,127,116,0.08)" stroke-width="1"/>
+      <circle cx="200" cy="420" r="110" fill="none" stroke="rgba(58,157,145,0.10)" stroke-width="1.5"/>
+      <circle cx="200" cy="420" r="70" fill="none" stroke="rgba(58,157,145,0.07)" stroke-width="1"/>
+      <circle cx="600" cy="80" r="90" fill="none" stroke="rgba(58,157,145,0.08)" stroke-width="1"/>
+      <g fill="rgba(255,255,255,0.12)">
+        <circle cx="80" cy="140" r="2.5"/><circle cx="150" cy="60" r="2"/><circle cx="480" cy="90" r="2"/>
+        <circle cx="760" cy="50" r="3"/><circle cx="1140" cy="170" r="2.5"/>
+        <circle cx="1160" cy="530" r="2"/><circle cx="60" cy="530" r="2"/><circle cx="640" cy="520" r="2.5"/>
+      </g>
+      <polygon points="1100,20 1130,38 1130,73 1100,91 1070,73 1070,38" fill="none" stroke="rgba(58,157,145,0.12)" stroke-width="1.2"/>
+      <polygon points="1060,52 1090,70 1090,105 1060,123 1030,105 1030,70" fill="none" stroke="rgba(58,157,145,0.08)" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-tag">Biotech · 京都, Japan</div>
+    <h1>不妊治療に、<em>新たな希望</em>を。</h1>
+    <p class="hero-sub">
+      Follicea Technologies は、次世代の不妊治療薬の開発に取り組む京都発のバイオテックスタートアップです。
+      最先端の科学と、患者さんへの深い共感を持って研究に臨んでいます。
+    </p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="technology-ja.html">テクノロジーを見る</a>
+      <a class="btn-outline" href="#about">会社概要</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <p class="section-label">About</p>
+    <h2 class="section-title">目的から生まれたサイエンス</h2>
+    <p class="section-body">
+      私たちは、不妊に悩むすべての方に効果的な治療の選択肢を届けることを使命とし、
+      京都から世界へ向けて革新的な医薬品の開発を進めています。
+    </p>
+    <div class="about-grid">
+      <div>
+        <p style="font-size:16px;color:var(--charcoal);line-height:1.95;margin-bottom:20px;">
+          Follicea Technologies は、生殖医学・分子生物学・創薬開発の各分野の専門家が結集した学際的チームです。
+          千年の歴史と最先端の革新が交差する街・京都を拠点に、不妊の症状だけでなく根本的な原因に
+          アプローチする標的治療薬の開発を行っています。
+        </p>
+        <p style="font-size:16px;color:var(--charcoal);line-height:1.95;">
+          「子どもを持ちたい」という思いはすべての人に等しく開かれるべきものです。
+          私たちのサイエンスは、その信念によって突き動かされています。
+        </p>
+      </div>
+      <div class="about-stat-grid">
+        <div class="stat-card"><div class="stat-number">2023</div><div class="stat-label">京都にて設立</div></div>
+        <div class="stat-card"><div class="stat-number">R&D</div><div class="stat-label">創薬研究段階</div></div>
+        <div class="stat-card"><div class="stat-number">1.8億+</div><div class="stat-label">世界の不妊に悩む方の推計人数</div></div>
+        <div class="stat-card"><div class="stat-number">🇯🇵</div><div class="stat-label">京都, 日本</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology">
+  <div class="section-inner">
+    <p class="section-label">Technology</p>
+    <h2 class="section-title">私たちのアプローチ</h2>
+    <p class="section-body">
+      有効性・安全性・患者さんの生活の質を重視した、
+      不妊の生物学的メカニズムを標的とする精密な創薬候補化合物を開発しています。
+    </p>
+    <div class="tech-cards">
+      <div class="tech-card">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+        </div>
+        <h3>標的創薬探索</h3>
+        <p>ハイスループットスクリーニングと計算モデリングを用いて、生殖機能に関わる新規分子標的を同定・検証します。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 3l-1 4H4l3 3-1 4 4-2 4 2-1-4 3-3h-4L13 3z"/><path d="M5 17l-2 4M19 17l2 4M12 17v4"/></svg>
+        </div>
+        <h3>低分子医薬品</h3>
+        <p>患者さんに優しい投薬を実現するため、優れた薬物動態プロファイルを持つ経口バイオアベイラブルな低分子化合物を設計します。</p>
+      </div>
+      <div class="tech-card">
+        <div class="tech-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+        </div>
+        <h3>橋渡し研究</h3>
+        <p>厳格な前臨床試験と生殖医療の主要機関との連携を通じて、ベンチから臨床への橋渡しを実現します。</p>
+      </div>
+    </div>
+    <a class="tech-more-link" href="technology-ja.html">テクノロジー詳細を見る →</a>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="section-inner">
+    <p class="section-label">Team</p>
+    <h2 class="section-title">サイエンスを支えるチーム</h2>
+    <p class="section-body">
+      生殖医学の発展という共通の使命のもとに集まった、小規模でも力強い研究・経営チームです。
+    </p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar avatar-a">NK</div>
+        <h3>木村 直樹</h3>
+        <p class="team-role">共同創業者 &amp; CEO</p>
+        <p class="team-bio">
+          京都の大手製薬研究所で生殖内分泌学・早期創薬開発を経験。
+          アカデミアの科学を臨床インパクトに結びつけることに情熱を持つ。
+        </p>
+        <div class="team-tags">
+          <span class="team-tag">創薬開発</span>
+          <span class="team-tag">生殖医学</span>
+          <span class="team-tag">事業戦略</span>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar avatar-b">YS</div>
+        <h3>佐藤 由紀</h3>
+        <p class="team-role">共同創業者 &amp; CSO</p>
+        <p class="team-bio">
+          京都大学にて分子生物学の博士号を取得。
+          卵胞生物学・卵巣シグナル経路を専門とし、国際的な生殖科学誌への掲載実績多数。
+        </p>
+        <div class="team-tags">
+          <span class="team-tag">分子生物学</span>
+          <span class="team-tag">卵胞生物学</span>
+          <span class="team-tag">標的同定</span>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar avatar-c">HM</div>
+        <h3>松田 裕志</h3>
+        <p class="team-role">創薬探索部長</p>
+        <p class="team-bio">
+          10年以上の産業経験を持つ創薬化学者。
+          生殖系適応症に特化したADMET最適化とリード化合物の進捗管理を専門とする。
+        </p>
+        <div class="team-tags">
+          <span class="team-tag">創薬化学</span>
+          <span class="team-tag">ADMET</span>
+          <span class="team-tag">リード最適化</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section id="news">
+  <div class="section-inner">
+    <p class="section-label">News</p>
+    <h2 class="section-title">最新情報</h2>
+    <div class="news-grid">
+      <div class="news-card">
+        <span class="news-tag">お知らせ</span>
+        <span class="news-date">2025年4月</span>
+        <h3>Follicea Technologies、京都にて設立</h3>
+        <p>不妊治療の変革を目指す新たなバイオテックベンチャー、Follicea Technologies の設立をご報告いたします。</p>
+        <a class="news-link" href="#">詳しく見る →</a>
+      </div>
+      <div class="news-card">
+        <span class="news-tag">研究</span>
+        <span class="news-date">2025年3月</span>
+        <h3>主要標的同定プログラムを開始</h3>
+        <p>当社の研究チームは、卵胞発育・卵巣機能の主要な調節因子に着目した系統的な標的同定研究を開始しました。</p>
+        <a class="news-link" href="#">詳しく見る →</a>
+      </div>
+      <div class="news-card">
+        <span class="news-tag">連携</span>
+        <span class="news-date">2025年2月</span>
+        <h3>京都大学研究機関との共同研究契約を締結</h3>
+        <p>治療薬パイプラインの前臨床開発を推進するため、京都大学の研究機関との共同研究協定を締結しました。</p>
+        <a class="news-link" href="#">詳しく見る →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT BANNER -->
+<div class="contact-banner">
+  <div style="max-width:700px;margin:0 auto;">
+    <h2>連携・お問い合わせを<br/>お待ちしています</h2>
+    <p>研究者・投資家・パートナー機関の方など、お気軽にご連絡ください。</p>
+    <a class="btn-primary" href="mailto:info@folliceatech.com" style="display:inline-block;">お問い合わせ</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo"><img src="Brand_assets/FolliceaTech_透明ロゴ.png" alt="Follicea Technologies" /></div>
+    <ul class="footer-links">
+      <li><a href="index-ja.html">ホーム</a></li>
+      <li><a href="#about">会社概要</a></li>
+      <li><a href="technology-ja.html">テクノロジー</a></li>
+      <li><a href="#team">チーム</a></li>
+      <li><a href="#news">ニュース</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 Follicea Technologies, Inc. 京都, 日本</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+</script>
+</body>
+</html>
