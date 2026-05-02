@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\user\\\\Projects\\\\homepage\\\\assets\")",
+      "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\user\\\\Projects\\\\homepage\\\\technology\")",
+      "Bash(Remove-Item -Recurse -Force \"c:\\\\Users\\\\user\\\\Projects\\\\homepage\\\\news\")",
+      "Bash(Remove-Item -Force \"c:\\\\Users\\\\user\\\\Projects\\\\homepage\\\\index.html\")",
+      "Bash(Remove-Item -Force \"c:\\\\Users\\\\user\\\\Projects\\\\homepage\\\\index-ja.html\")"
+    ]
+  }
+}
