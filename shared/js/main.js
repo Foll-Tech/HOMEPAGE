@@ -142,3 +142,48 @@
   init();
   frame();
 }());
+
+
+/* ===========================
+   NEWS AUTO-RENDER
+   news-data.js が先に読み込まれている前提で動作します。
+   - トップページ (#news .news-grid) にニュースカードを描画
+   - 記事ページ (.article-footer .related-grid) に関連記事を描画
+   =========================== */
+(function () {
+  if (typeof FOLLTECH_NEWS === 'undefined') return;
+
+  const lang     = document.documentElement.lang || 'ja';
+  const articles = FOLLTECH_NEWS[lang] || [];
+
+  /* --- トップページ: 最新情報カード --- */
+  const newsGrid = document.querySelector('#news .news-grid');
+  if (newsGrid) {
+    const readMore = lang === 'ja' ? '詳しく見る →' : 'Read more →';
+    newsGrid.innerHTML = articles.map(a =>
+      `<div class="news-card">
+        <span class="news-tag">${a.tag}</span>
+        <span class="news-date">${a.date}</span>
+        <h3>${a.title}</h3>
+        <p>${a.excerpt}</p>
+        <a class="news-link" href="news/${a.file}">${readMore}</a>
+      </div>`
+    ).join('');
+  }
+
+  /* --- 記事ページ: 関連記事 --- */
+  const relatedGrid = document.querySelector('.article-footer .related-grid');
+  if (relatedGrid) {
+    const parts       = location.pathname.replace(/\/+$/, '').split('/');
+    const currentFile = parts[parts.length - 1];
+    const related     = articles
+      .filter(a => a.file !== currentFile)
+      .slice(0, 2);
+    relatedGrid.innerHTML = related.map(a =>
+      `<a class="related-card" href="${a.file}">
+        <p class="r-tag">${a.tag}</p>
+        <h4>${a.title}</h4>
+      </a>`
+    ).join('');
+  }
+}());
