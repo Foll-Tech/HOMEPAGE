@@ -16,7 +16,7 @@ const FOLLTECH_NEWS = {
       file:    "260501.html",
       tag:     "お知らせ",
       date:    "2026年5月",
-      title:   "Follicea Technologies、大阪にて設立",
+      title:   "株式会社Follicea Technologies、大阪にて創業",
       excerpt: "不妊治療の変革を目指す新たなバイオテックベンチャー、Follicea Technologies の設立をご報告いたします。"
     },
     {
