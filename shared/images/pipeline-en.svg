@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 190" role="img" aria-label="Drug Development Pipeline">
+  <title>Drug Development Pipeline — FT-001</title>
+
+  <!-- ===== STAGE 1: Target ID (Active) ===== -->
+  <rect x="74" y="10" width="148" height="148" rx="10" fill="#3a9d91"/>
+  <rect x="88" y="22" width="60" height="19" rx="9" fill="rgba(0,0,0,0.2)"/>
+  <text x="118" y="35.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="600" fill="white">● Active</text>
+  <text x="148" y="60" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10.5" letter-spacing="0.08em" fill="rgba(255,255,255,0.75)">TARGET ID</text>
+  <text x="148" y="85" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="19" font-weight="700" fill="white">FT-001</text>
+  <text x="148" y="107" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Granulosa cell signaling.</text>
+  <text x="148" y="121" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">Genetic validation done.</text>
+
+  <!-- Arrow 1→2 -->
+  <polygon points="224,79 238,85 224,91" fill="#94a3b8"/>
+
+  <!-- ===== STAGE 2: Hit Generation (Active) ===== -->
+  <rect x="240" y="10" width="148" height="148" rx="10" fill="#3a9d91"/>
+  <rect x="254" y="22" width="60" height="19" rx="9" fill="rgba(0,0,0,0.2)"/>
+  <text x="284" y="35.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="600" fill="white">● Active</text>
+  <text x="314" y="60" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10.5" letter-spacing="0.08em" fill="rgba(255,255,255,0.75)">HIT GENERATION</text>
+  <text x="314" y="85" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="19" font-weight="700" fill="white">FT-001</text>
+  <text x="314" y="107" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">vHTS &amp; phenotypic</text>
+  <text x="314" y="121" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">assay cascade in progress.</text>
+
+  <!-- Arrow 2→3 -->
+  <polygon points="390,79 404,85 390,91" fill="#94a3b8"/>
+
+  <!-- ===== STAGE 3: Lead Optimization (Planned) ===== -->
+  <rect x="406" y="10" width="148" height="148" rx="10" fill="#4b6fa5"/>
+  <rect x="420" y="22" width="56" height="19" rx="9" fill="rgba(0,0,0,0.2)"/>
+  <text x="448" y="35.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="600" fill="white">Planned</text>
+  <text x="480" y="60" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10.5" letter-spacing="0.08em" fill="rgba(255,255,255,0.75)">LEAD OPTIMIZATION</text>
+  <text x="480" y="85" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="19" font-weight="700" fill="white">FT-001</text>
+  <text x="480" y="107" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">SAR campaign planned</text>
+  <text x="480" y="121" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">for 2026.</text>
+
+  <!-- Arrow 3→4 -->
+  <polygon points="556,79 570,85 556,91" fill="#94a3b8"/>
+
+  <!-- ===== STAGE 4: Preclinical (Planned) ===== -->
+  <rect x="572" y="10" width="148" height="148" rx="10" fill="#4b6fa5"/>
+  <rect x="586" y="22" width="56" height="19" rx="9" fill="rgba(0,0,0,0.2)"/>
+  <text x="614" y="35.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="600" fill="white">Planned</text>
+  <text x="646" y="60" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10.5" letter-spacing="0.08em" fill="rgba(255,255,255,0.75)">PRECLINICAL</text>
+  <text x="646" y="85" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="19" font-weight="700" fill="white">FT-001</text>
+  <text x="646" y="107" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">IND-enabling studies</text>
+  <text x="646" y="121" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">targeting 2027.</text>
+
+  <!-- Arrow 4→5 -->
+  <polygon points="722,79 736,85 722,91" fill="#94a3b8"/>
+
+  <!-- ===== STAGE 5: Phase I (Future) ===== -->
+  <rect x="738" y="10" width="148" height="148" rx="10" fill="#7d94b0"/>
+  <rect x="752" y="22" width="46" height="19" rx="9" fill="rgba(0,0,0,0.2)"/>
+  <text x="775" y="35.5" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="600" fill="white">Future</text>
+  <text x="812" y="60" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="10.5" letter-spacing="0.08em" fill="rgba(255,255,255,0.75)">PHASE I</text>
+  <text x="812" y="85" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="19" font-weight="700" fill="white">FT-001</text>
+  <text x="812" y="107" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">First-in-human studies —</text>
+  <text x="812" y="121" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="9.5" fill="rgba(255,255,255,0.85)">long-term horizon.</text>
+
+  <!-- Footnote -->
+  <text x="480" y="175" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="11" fill="#64748b">FT-001 = internal program code. Target identity is confidential at this stage.</text>
+</svg>
