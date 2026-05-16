@@ -59,20 +59,20 @@
     </p>
     <div class="problem-grid">
       <div class="problem-stat">
-        <div class="problem-stat-num">約17%</div>
-        <div class="problem-stat-label">生殖年齢の成人が不妊に影響を受けているとされる（WHO, 2023）</div>
+        <div class="problem-stat-num">8.5万人</div>
+        <div class="problem-stat-label">ART(生殖補助医療)により生まれた新生児数（日本、2023）</div>
       </div>
       <div class="problem-stat">
-        <div class="problem-stat-num">1.8億人+</div>
-        <div class="problem-stat-label">世界規模での推定患者数</div>
+        <div class="problem-stat-num">9人に1人</div>
+        <div class="problem-stat-label">ARTによる出生割合(日本、2023)</div>
       </div>
       <div class="problem-stat">
-        <div class="problem-stat-num">40〜50%</div>
-        <div class="problem-stat-label">が女性因子による不妊で、多くは分子レベルでの解明が不十分</div>
+        <div class="problem-stat-num">56万回</div>
+        <div class="problem-stat-label">ARTの実施周期数（日本、2023）</div>
       </div>
       <div class="problem-stat">
         <div class="problem-stat-num">限定的</div>
-        <div class="problem-stat-label">排卵障害性不妊に対する、経口・機序標的型の薬剤は現在ほとんど存在しない</div>
+        <div class="problem-stat-label">着床過程を直接標的とする薬剤は存在しない在ほとんど存在しない</div>
       </div>
     </div>
   </div>
@@ -93,7 +93,7 @@
         <div class="approach-num">1</div>
         <div>
           <h3>インシリコスクリーニング</h3>
-          <p>分子ドッキングと仮想ハイスループットスクリーニング（vHTS）により、
+          <p>分子ドッキングとハイスループットスクリーニングにより、
           数億規模の化合物を標的タンパク質構造に対して評価します。
           物理ベースモデルと機械学習を組み合わせ、結合親和性・選択性・初期ADMET特性を
           合成前に予測し、候補を大幅に絞り込みます。</p>
@@ -102,115 +102,113 @@
       <div class="approach-item">
         <div class="approach-num">2</div>
         <div>
-          <h3>ペプチド自動合成</h3>
-          <p>計算で選定した配列は、完全自動化された合成プラットフォームへ直接投入されます。
-          インライン質量分析・HPLCによる品質確認を備えたモジュール型合成ロボットが、
-          月間最大18,000種類のペプチドを製造し、数時間以内に物理サンプルへと変換します。</p>
+          <h3>自動パラレル合成</h3>
+          <p>計算で選定した化学構造は、自動化された合成プラットフォームへ直接投入されます。
+          月間最大3,000種類の化合物を一人で合成することが可能です。</p>
         </div>
       </div>
       <div class="approach-item">
         <div class="approach-num">3</div>
         <div>
-          <h3>ロボットによる高スループットスクリーニング</h3>
+          <h3>ロボットによるハイスループットスクリーニング</h3>
           <p>合成した化合物はそのままロボットアッセイプラットフォームへ。
-          液体ハンドリングロボット・384/1,536ウェルプレート・バーコード管理された
-          化合物ストレージが24時間365日稼働し、1日あたり数十万件の再現性の高いデータを生成します。
-          AIによる解析結果は即座に次の計算サイクルへフィードバックされます。</p>
+          液体ハンドリングロボットによる96/384/1,536ウェルプレートによるスクリーニング、
+          1日あたり最大数万件の再現性の高いデータを生成します。
+          </p>
         </div>
       </div>
       <div class="approach-item">
         <div class="approach-num">4</div>
         <div>
           <h3>オルガノイド検証</h3>
-          <p>優先候補は患者由来オルガノイドモデルで検証されます。
-          疾患生理を忠実に再現する三次元組織構造体に対し、
-          HTS対応のマイクロウェルアレイ・PEG基板・マイクロ流体カプセル封入システムを用いて、
-          有効性と臓器特異的安全性をin vivo試験前に並列評価します。</p>
+          <p>薬剤候補化合物は患者・動物由来オルガノイドモデルで検証されます。
+          疾患生理を再現する三次元組織構造体に対し、
+          有効性と臓器特異的安全性をin vivo試験前に評価します。</p>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- 3. PLATFORM PILLARS -->
-<div class="content-section">
-  <div class="content-inner">
-    <p class="section-label">Platform</p>
-    <h2 class="section-title">コアテクノロジーの柱</h2>
-    <p class="section-body">4つの技術が緊密に統合された創薬エンジン——各技術が互いを増幅し、分子仮説から臨床候補へと至る道筋を加速させます。</p>
-    <div class="platform-grid">
-      <div class="platform-card">
-        <div class="platform-card-header">
-          <div class="platform-icon icon-teal">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+
+<!--
+     3. PLATFORM PILLARS 
+    <div class="content-section">
+      <div class="content-inner">
+        <p class="section-label">Platform</p>
+        <h2 class="section-title">コアテクノロジーの柱</h2>
+        <p class="section-body">4つの技術が緊密に統合された創薬エンジン——各技術が互いを増幅し、分子仮説から臨床候補へと至る道筋を加速させます。</p>
+        <div class="platform-grid">
+          <div class="platform-card">
+            <div class="platform-card-header">
+              <div class="platform-icon icon-teal">
+                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <h3>インシリコ創薬</h3>
+            </div>
+            <p>独自の計算プラットフォームにより、分子ドッキングとバーチャルスクリーニングで
+            数億規模の化合物を標的タンパク質構造に対して評価します。
+            物理モデルとAI・機械学習を組み合わせ、結合親和性・選択性・ADMET特性を合成前に予測します。</p>
+            <ul>
+              <li>分子ドッキングシミュレーション</li>
+              <li>AI/MLによる結合親和性・選択性予測</li>
+              <li>低分子～中分子を対象</li>
+            </ul>
           </div>
-          <h3>インシリコ創薬</h3>
-        </div>
-        <p>独自の計算プラットフォームにより、分子ドッキングと仮想ハイスループットスクリーニング（vHTS）で
-        数億規模の化合物を標的タンパク質構造に対して評価します。
-        物理モデルとディープラーニングを組み合わせ、結合親和性・選択性・ADMET特性を合成前に予測します。</p>
-        <ul>
-          <li>分子ドッキング・仮想HTS（vHTS）</li>
-          <li>AI/MLによる結合親和性・選択性予測</li>
-          <li>統合ADMET・薬物動態モデリング</li>
-          <li>フラグメントベース・構造誘導設計</li>
-        </ul>
-      </div>
-      <div class="platform-card">
-        <div class="platform-card-header">
-          <div class="platform-icon icon-navy">
-            <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+          <div class="platform-card">
+            <div class="platform-card-header">
+              <div class="platform-icon icon-navy">
+                <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
+              </div>
+              <h3>ハイスループット自動合成</h3>
+            </div>
+            <p>計算で選定した化学構造は自動化された合成プラットフォームへ直接投入されます。
+            パラレル合成ロボットが、月間最大3,000種類/1人の候補化合物を合成。仮想候補を物理サンプルへ変換します。</p>
+            <ul>
+              <li>月間最大3,000種類のペプチド製造を一人で</li>
+              <li>構造カスタマイズに対応</li>
+              <li>HPLCによる品質確認もハイスループット化可能</li>
+            </ul>
           </div>
-          <h3>ハイスループットペプチド合成</h3>
-        </div>
-        <p>計算で選定した配列は完全自動化された合成プラットフォームへ直接投入されます。
-        インライン質量分析・HPLC品質確認を備えたモジュール型合成ロボットが、
-        月間最大18,000種類のペプチドを製造——数時間以内に仮想候補を物理サンプルへ変換します。</p>
-        <ul>
-          <li>月間最大18,000種類のペプチド製造</li>
-          <li>24時間以内に600種類以上の15残基配列を合成</li>
-          <li>環状・修飾・ステープルペプチドに対応</li>
-          <li>インライン質量分析・HPLCによる品質確認</li>
-        </ul>
-      </div>
-      <div class="platform-card">
-        <div class="platform-card-header">
-          <div class="platform-icon icon-teal">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+          <div class="platform-card">
+            <div class="platform-card-header">
+              <div class="platform-icon icon-teal">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+              </div>
+              <h3>自動ロボットスクリーニング</h3>
+            </div>
+            <p>合成した化合物はそのまま自動アッセイプラットフォームへ。
+            液体ハンドリングロボット・384/1,536ウェルマイクロプレート・
+            バーコード管理された化合物ストレージが24時間365日稼働し、
+            1日あたり数十万件の再現性の高いデータを生成します。</p>
+            <ul>
+              <li>384・1,536ウェルプレートHTSフォーマット</li>
+              <li>3Dバーコードトラッキング付き液体ハンドリングロボット</li>
+              <li>24時間無人稼働</li>
+              <li>AI解析と反復フィードバック</li>
+            </ul>
           </div>
-          <h3>自動ロボットスクリーニング</h3>
-        </div>
-        <p>合成した化合物はそのまま自動アッセイプラットフォームへ。
-        液体ハンドリングロボット・384/1,536ウェルマイクロプレート・
-        バーコード管理された化合物ストレージが24時間365日稼働し、
-        1日あたり数十万件の再現性の高いデータを生成します。</p>
-        <ul>
-          <li>384・1,536ウェルプレートHTSフォーマット</li>
-          <li>3Dバーコードトラッキング付き液体ハンドリングロボット</li>
-          <li>24時間無人稼働</li>
-          <li>AI解析と反復フィードバック</li>
-        </ul>
-      </div>
-      <div class="platform-card">
-        <div class="platform-card-header">
-          <div class="platform-icon icon-navy">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="platform-card">
+            <div class="platform-card-header">
+              <div class="platform-icon icon-navy">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>オルガノイドアッセイ</h3>
+            </div>
+            <p>優先候補は患者由来オルガノイドモデルで検証されます——疾患生理を忠実に再現する三次元組織構造体です。
+            HTS対応のオルガノイドシステムにより、臨床応答の予測精度88〜100%を示した
+            査読論文の知見をベースにした大規模な薬効評価が可能です。</p>
+            <ul>
+              <li>患者由来3D組織モデル（多臓器パネル）</li>
+              <li>臨床応答予測精度88〜100%</li>
+              <li>HTS対応マイクロウェル・PEG基板システム</li>
+              <li>マイクロ流体カプセル封入による脳オルガノイド</li>
+            </ul>
           </div>
-          <h3>オルガノイドアッセイ</h3>
         </div>
-        <p>優先候補は患者由来オルガノイドモデルで検証されます——疾患生理を忠実に再現する三次元組織構造体です。
-        HTS対応のオルガノイドシステムにより、臨床応答の予測精度88〜100%を示した
-        査読論文の知見をベースにした大規模な薬効評価が可能です。</p>
-        <ul>
-          <li>患者由来3D組織モデル（多臓器パネル）</li>
-          <li>臨床応答予測精度88〜100%</li>
-          <li>HTS対応マイクロウェル・PEG基板システム</li>
-          <li>マイクロ流体カプセル封入による脳オルガノイド</li>
-        </ul>
       </div>
     </div>
-  </div>
-</div>
+  --!>
 
 <!-- 4. PIPELINE -->
 <div class="content-section alt">
@@ -221,14 +219,13 @@
       現在のパイプラインは、胚移植時における胚盤胞の接着能の活性化を中心に、並行して複数のプロジェクトを進行させています。
     </p>
     <img
-      src="../../shared/images/pipeline-ja.svg"
-      alt="開発パイプライン — IZNM-2：標的同定（進行中）→ ヒット探索（進行中）→ リード最適化（計画中）→ 前臨床（計画中）→ 第Ⅰ相試験（将来）"
-      style="width:100%;max-width:960px;display:block;margin:0 auto;"
+      src="../../shared\images\tech_fig\pipeline_jpn_20260512.png"
+      style="width:100%;max-width:960px;display:block;margin:40px auto 0;"
     />
   </div>
 </div>
 
-<!-- 5. FOCUS AREAS -->
+<!-- 5. FOCUS AREAS 
 <div class="content-section">
   <div class="content-inner">
     <p class="section-label">Research Focus</p>
@@ -268,12 +265,14 @@
     </div>
   </div>
 </div>
+-->
 
-<!-- 6. COLLABORATIONS -->
+
+<!-- 6. COLLABORATIONS 
 <div class="content-section alt">
   <div class="content-inner">
     <p class="section-label">Collaborations</p>
-    <h2 class="section-title">科学的パートナーシップ</h2>
+    <h2 class="section-title">パートナーシップ</h2>
     <p class="section-body">オープンな協力関係がサイエンスを加速すると考えています。アカデミア・病院・バイオテック企業との連携を積極的に進めています。</p>
     <div class="collab-grid">
       <div class="collab-card">
@@ -281,8 +280,8 @@
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <div>
-          <h4>京都大学 — 共同研究</h4>
-          <p>標的検証と前臨床モデル開発に関する生殖生物学共同研究協定を締結・推進中。</p>
+          <h4>関西医科大学・京都大学 — 共同研究</h4>
+          <p>標的検証と前臨床モデル開発に関する共同研究協定を締結。</p>
         </div>
       </div>
       <div class="collab-card">
@@ -291,7 +290,7 @@
         </div>
         <div>
           <h4>臨床アドバイザリーネットワーク</h4>
-          <p>生殖内分泌専門医・臨床IVF専門家との対話を通じ、開発優先順位が臨床ニーズを反映するよう継続的に調整しています。</p>
+          <p>生殖専門医・IVF専門家との対話を通じ、開発優先順位が臨床ニーズを反映するよう継続的に調整しています。</p>
         </div>
       </div>
       <div class="collab-card">
@@ -315,12 +314,12 @@
     </div>
   </div>
 </div>
+-->
 
 <!-- CTA -->
 <div class="cta-section">
   <div style="max-width:700px;margin:0 auto;">
-    <h2>共に研究を進めませんか</h2>
-    <p>私たちのサイエンスに関心をお持ちの方は、ぜひお気軽にご連絡ください。</p>
+    <h2>私たちのサイエンスに関心をお持ちの方は、<br>ぜひお気軽にご連絡ください。</h2>
     <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
       <a class="btn-primary" href="mailto:info@folliceatech.com">お問い合わせ</a>
       <a class="btn-outline-light" href="../">ホームへ戻る</a>

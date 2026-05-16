@@ -36,25 +36,25 @@ const FOLLTECH_NEWS = {
   ],
   en: [
     {
-      file:    "250401.html",
+      file:    "260501.html",
       tag:     "Announcement",
-      date:    "April 2025",
-      title:   "Follicea Technologies Established in Kyoto",
-      excerpt: "We are proud to announce the official founding of Follicea Technologies, a new biotech venture committed to transforming infertility treatment."
+      date:    "May 2026",
+      title:   "Follicea Technologies Founded in Osaka",
+      excerpt: "We are pleased to announce the founding of Follicea Technologies, Inc. — a Kansai-based biotech startup specializing in innovative pharmacological treatments for infertility."
     },
     {
-      file:    "250301.html",
-      tag:     "Research",
-      date:    "March 2025",
-      title:   "Lead Target Identification Program Initiated",
-      excerpt: "Our science team has begun systematic target identification studies focused on key regulators of follicular development and ovarian function."
+      file:    "260301.html",
+      tag:     "Funding",
+      date:    "March 2026",
+      title:   "Selected for the Kansai Startup Incubation Program 'Kidou', 4th Cohort",
+      excerpt: "Follicea Technologies was selected from over 100 applicants as one of five startups in the 4th cohort of the Kansai incubation program 'Kidou,' receiving up to 10 million yen in funding and 6 months of expert support."
     },
     {
-      file:    "250201.html",
-      tag:     "Partnership",
-      date:    "February 2025",
-      title:   "Collaboration Agreement with Kyoto University Research Institute",
-      excerpt: "Follicea Technologies has entered into a research collaboration to advance preclinical development of our therapeutic pipeline."
+      file:    "250820.html",
+      tag:     "Award",
+      date:    "August 2025",
+      title:   "Selected for Nakanoshima Qross Drug Discovery Cluster Campus Program, 1st Cohort",
+      excerpt: "Follicea Technologies has been selected as a first-cohort startup for the Nakanoshima Qross Drug Discovery and Commercialization Promotion Support Program, a Ministry of Health-certified initiative."
     }
   ]
 };
