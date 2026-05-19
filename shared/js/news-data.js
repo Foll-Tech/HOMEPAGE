@@ -21,14 +21,14 @@ const FOLLTECH_NEWS = {
     },
     {
       file:    "260301.html",
-      tag:     "資金調達",
+      tag:     "資金調達、受賞",
       date:    "2026年3月",
       title:   "関西起業支援プログラム 起動4期に採択されました",
       excerpt: "Follicea Technologiesは、iCeMSが推進する iCeMS Venture Studio の取り組みの一環として立ち上げが進められており、先進的研究成果の社会実装を目指したスタートアップ創出の好例として期待されています。"
     },
     {
       file:    "250820.html",
-      tag:     "受賞",
+      tag:     "採択",
       date:    "2025年8月",
       title:   "Nakanoshima Qross「創薬クラスターキャンパス事業」第一期として採択",
       excerpt: "Nakanoshima Qrossが推進する創薬クラスターキャンパス事業の第一期採択企業として選定されました。"

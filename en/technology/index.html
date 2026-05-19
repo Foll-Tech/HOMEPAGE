@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -27,7 +27,7 @@
       <li><a href="../#news">News</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:12px;">
-      <a class="btn-primary" href="mailto:hello@folliceatech.com" style="font-size:13px;padding:8px 16px;">Contact</a>
+      <a class="btn-primary nav-cta" href="mailto:hello@folliceatech.com" style="font-size:13px;padding:8px 16px;white-space:nowrap;">Contact</a>
       <div class="nav-lang">
         <a class="lang-btn active" href="../../en/technology/">EN</a>
         <a class="lang-btn" href="../../ja/technology/">JP</a>
@@ -38,7 +38,11 @@
 </nav>
 
 <!-- PAGE HERO -->
-<div class="page-hero">
+<div class="page-hero has-light-bg">
+  <!-- --bg-opacity: 0〜1 で画像の濃さを調整（0=透明、1=元の濃さ）-->
+  <div class="section-bg" style="--bg-opacity: 0.25">
+    <img class="section-bg-img" src="../../shared/images/tech_fig/tech_background.png" alt="" aria-hidden="true" />
+  </div>
   <div class="page-hero-inner">
     <p class="breadcrumb"><a href="../">Home</a> / Technology</p>
     <h1>Our Technology Platform</h1>
@@ -48,6 +52,10 @@
 
 <!-- 1. THE PROBLEM -->
 <div class="content-section">
+  <!-- ▼ Background image (optional) — change src to swap the image
+  <div class="section-bg">
+    <img class="section-bg-img" src="../../shared/images/sections/bg.jpg" alt="" aria-hidden="true" />
+  </div>-->
   <div class="content-inner">
     <p class="section-label">The Problem</p>
     <h2 class="section-title">Infertility Remains Largely Underserved</h2>
@@ -81,6 +89,10 @@
 
 <!-- 2. OUR APPROACH -->
 <div class="content-section alt">
+  <!-- ▼ Background image (optional) — change src to swap the image
+  <div class="section-bg">
+    <img class="section-bg-img" src="../../shared/images/sections/bg.jpg" alt="" aria-hidden="true" />
+  </div>-->
   <div class="content-inner">
     <p class="section-label">Our Approach</p>
     <h2 class="section-title">Guided by Computation, Proven by Experiment</h2>
@@ -123,80 +135,14 @@
   </div>
 </div>
 
-<!-- 3. PLATFORM PILLARS (commented out — see JP version)
-<div class="content-section">
-  <div class="content-inner">
-    <p class="section-label">Platform</p>
-    <h2 class="section-title">Core Technology Pillars</h2>
-    <p class="section-body">Four tightly integrated capabilities form our drug discovery engine — each pillar amplifying the others to accelerate the path from molecular hypothesis to clinical candidate.</p>
-    <div class="platform-grid">
-      <div class="platform-card">
-        <div class="platform-card-header">
-          <div class="platform-icon icon-teal">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </div>
-          <h3>In Silico Drug Design</h3>
-        </div>
-        <p>Our proprietary computational platform uses molecular docking and virtual high-throughput screening (vHTS) to evaluate hundreds of millions of compounds against target protein structures. Physics-based models and deep learning are combined to predict binding affinity, selectivity, and ADMET properties before any synthesis is performed.</p>
-        <ul>
-          <li>Molecular docking &amp; virtual HTS (vHTS)</li>
-          <li>AI/ML-based affinity &amp; selectivity prediction</li>
-          <li>Integrated ADMET &amp; pharmacokinetics modeling</li>
-          <li>Fragment-based and structure-guided design</li>
-        </ul>
-      </div>
-      <div class="platform-card">
-        <div class="platform-card-header">
-          <div class="platform-icon icon-navy">
-            <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
-          </div>
-          <h3>High-Throughput Peptide Synthesis</h3>
-        </div>
-        <p>Computationally selected sequences enter our fully automated synthesis platform. Modular synthesis robots with inline MS/HPLC quality verification produce up to 18,000 peptide variants per month — translating virtual candidates into physical samples within hours, not weeks.</p>
-        <ul>
-          <li>Up to 18,000 peptide variants per month</li>
-          <li>600+ 15-residue sequences synthesized per 24 hours</li>
-          <li>Cyclic, modified &amp; stapled peptides supported</li>
-          <li>Inline mass spec &amp; HPLC quality verification</li>
-        </ul>
-      </div>
-      <div class="platform-card">
-        <div class="platform-card-header">
-          <div class="platform-icon icon-teal">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
-          </div>
-          <h3>Automated Robotic Screening</h3>
-        </div>
-        <p>Synthesized compounds feed directly into our automated assay platform. Liquid handling robots, 384/1,536 well microplate formats, and barcode-tracked compound storage operate 24/7, generating hundreds of thousands of reproducible data points per day. AI analysis feeds results back into the next computation cycle.</p>
-        <ul>
-          <li>384 &amp; 1,536 well plate HTS formats</li>
-          <li>Liquid handling robots with 3D barcode tracking</li>
-          <li>24/7 unattended operation</li>
-          <li>AI-driven data analysis &amp; iterative feedback</li>
-        </ul>
-      </div>
-      <div class="platform-card">
-        <div class="platform-card-header">
-          <div class="platform-icon icon-navy">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Organoid Assays</h3>
-        </div>
-        <p>Prioritized hits are validated in patient-derived organoid models — three-dimensional tissue constructs that recapitulate disease physiology with high clinical fidelity. HTS-compatible organoid systems enable drug response assessment at scale, with demonstrated 88–100% clinical prediction accuracy in peer-reviewed studies.</p>
-        <ul>
-          <li>Patient-derived 3D tissue models (multi-organ panel)</li>
-          <li>88–100% clinical response prediction accuracy</li>
-          <li>HTS-compatible microwell &amp; PEG substrate systems</li>
-          <li>Brain organoids via microfluidic encapsulation</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
--->
+<!-- 3. TECHNOLOGY PLATFORM -->
 
 <!-- 4. PIPELINE -->
 <div class="content-section alt">
+  <!-- ▼ Background image (optional) — change src to swap the image
+  <div class="section-bg">
+    <img class="section-bg-img" src="../../shared/images/sections/bg.jpg" alt="" aria-hidden="true" />
+  </div>-->
   <div class="content-inner">
     <p class="section-label">Pipeline</p>
     <h2 class="section-title">Drug Development Pipeline</h2>
@@ -205,101 +151,15 @@
       with multiple projects advancing in parallel.
     </p>
     <img
-      src="../../shared\images\tech_fig\pipeline_en_20260512.png"
-      style="width:100%;max-width:960px;display:block;margin: 40px auto;"
+      src="../../shared/images/tech_fig/pipeline_en_20260512.png"
+      style="width:100%;max-width:960px;display:block;margin:40px auto 0;"
     />
   </div>
 </div>
 
-<!-- 5. FOCUS AREAS (commented out — see JP version)
-<div class="content-section">
-  <div class="content-inner">
-    <p class="section-label">Research Focus</p>
-    <h2 class="section-title">Scientific Focus Areas</h2>
-    <p class="section-body">Our target selection is guided by unmet clinical need and biological tractability across these key areas of reproductive medicine.</p>
-    <div class="focus-grid">
-      <div class="focus-card">
-        <span class="focus-tag">Ovarian Biology</span>
-        <h3>Folliculogenesis &amp; Ovulation</h3>
-        <p>Understanding and restoring the regulated process of follicle recruitment, development, and ovulation — disrupted in anovulatory conditions such as PCOS and hypothalamic amenorrhea.</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">Oocyte Quality</span>
-        <h3>Oocyte Maturation &amp; Competence</h3>
-        <p>Addressing molecular defects in oocyte meiotic maturation and mitochondrial function that contribute to poor embryo quality — a major unmet need in older reproductive-age patients.</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">Endocrinology</span>
-        <h3>Hormonal Axis Modulation</h3>
-        <p>Small molecule modulators of the HPG axis that can fine-tune FSH and LH signaling with greater specificity and fewer side effects than current injectable gonadotropin therapies.</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">Male Infertility</span>
-        <h3>Spermatogenesis Support</h3>
-        <p>Although our lead program targets female infertility, we are actively evaluating male-factor indications where targeted small molecule intervention may restore spermatogenesis.</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">Implantation</span>
-        <h3>Endometrial Receptivity</h3>
-        <p>Investigating molecular determinants of endometrial window-of-implantation timing and receptivity to support embryo implantation success — relevant for both natural and ART cycles.</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">Precision Medicine</span>
-        <h3>Patient Stratification</h3>
-        <p>Developing biomarker strategies to identify patient sub-populations most likely to respond to our therapies, maximizing clinical benefit and supporting regulatory approval.</p>
-      </div>
-    </div>
-  </div>
-</div>
--->
+<!-- 5. FOCUS AREAS -->
 
-<!-- 6. COLLABORATIONS (commented out — see JP version)
-<div class="content-section alt">
-  <div class="content-inner">
-    <p class="section-label">Collaborations</p>
-    <h2 class="section-title">Scientific Partnerships</h2>
-    <p class="section-body">We believe open collaboration accelerates the science. We actively seek partnerships with academic groups, hospitals, and biotech companies whose capabilities complement ours.</p>
-    <div class="collab-grid">
-      <div class="collab-card">
-        <div class="collab-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div>
-          <h4>Kyoto University — Collaborative Research</h4>
-          <p>Active joint research agreement focused on target validation and preclinical model development in reproductive biology.</p>
-        </div>
-      </div>
-      <div class="collab-card">
-        <div class="collab-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div>
-          <h4>Clinical Advisory Network</h4>
-          <p>Ongoing dialogue with reproductive endocrinologists and clinical IVF specialists to ensure our development priorities reflect real clinical needs.</p>
-        </div>
-      </div>
-      <div class="collab-card">
-        <div class="collab-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <div>
-          <h4>Open to New Partnerships</h4>
-          <p>We welcome discussions with academic groups, CROs, and biotech companies interested in reproductive medicine research or co-development opportunities.</p>
-        </div>
-      </div>
-      <div class="collab-card">
-        <div class="collab-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
-        <div>
-          <h4>Industry Collaboration</h4>
-          <p>Exploring partnership structures with established pharmaceutical and biotech companies for later-stage co-development, licensing, or co-promotion of our pipeline assets.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
--->
+<!-- 6. PARTNERSHIPS -->
 
 <!-- CTA -->
 <div class="cta-section">
@@ -326,7 +186,7 @@
       <li><a href="../#team">Team</a></li>
       <li><a href="../#news">News</a></li>
     </ul>
-    <p class="footer-copy">© 2025 Follicea Technologies, Inc. Kyoto, Japan.</p>
+    <p class="footer-copy">© 2026 Follicea Technologies, Inc. Osaka, Japan.</p>
   </div>
 </footer>
 

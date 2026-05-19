@@ -39,7 +39,8 @@
   .nav-cta    { display: none; }  /* モバイルではハンバーガーメニューに集約 */
 
   /* Landing page */
-  .hero { padding: 90px 20px 80px; }
+  .hero { padding: 80px 20px 64px; }
+  .hero-content { max-width: 100%; }
   section { padding: 64px 20px; }
 
   .tech-cards,

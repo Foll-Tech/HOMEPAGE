@@ -27,7 +27,7 @@
       <li><a href="#news">ニュース</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:12px;">
-      <a class="btn-primary" href="mailto:hello@folliceatech.com" style="font-size:13px;padding:8px 16px;">お問い合わせ</a>
+      <a class="btn-primary nav-cta" href="mailto:hello@folliceatech.com" style="font-size:13px;padding:8px 16px;white-space:nowrap;">お問い合わせ</a>
       <div class="nav-lang">
         <a class="lang-btn" href="../en/">EN</a>
         <a class="lang-btn active" href="../ja/">JP</a>
@@ -42,9 +42,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <canvas id="heroBg" style="position:absolute;inset:0;width:100%;height:100%;display:block;"></canvas>
+    <!-- 背景画像: src の値を変更するだけで差し替えできます -->
+    <img class="hero-bg-img" src="../shared/images/hero/background_IVF.png" alt="" aria-hidden="true" />
   </div>
-  <div class="hero-content nowrap">
+  <div class="hero-content">
     <h1><em>命の誕生</em>における不確実性を減らす</h1>
     <p class="hero-sub">
       Follicea Technologies は、次世代の不妊治療薬の開発に取り組む<br>
@@ -62,6 +63,8 @@
 
 <!-- ABOUT -->
 <section id="about">
+  <!-- ▼ 背景画像 (任意) — src を変更するだけで差し替え可能
+  <div class="section-bg"><img class="section-bg-img" src="../shared/images/sections/about-bg.jpg" alt="" aria-hidden="true" /></div>-->
   <div class="section-inner">
     <p class="section-label">About</p>
     <h2 class="section-title">不妊治療は世界的な課題</h2>
@@ -93,6 +96,8 @@
 
 <!-- TECHNOLOGY -->
 <section id="technology">
+  <!-- ▼ 背景画像 (任意) — src を変更するだけで差し替え可能
+  <div class="section-bg"><img class="section-bg-img" src="../shared/images/sections/technology-bg.jpg" alt="" aria-hidden="true" /></div>-->
   <div class="section-inner">
     <p class="section-label">Technology</p>
     <h2 class="section-title">効率的な創薬プラットフォーム</h2>
@@ -130,6 +135,8 @@
 
 <!-- TEAM -->
 <section id="team">
+  <!-- ▼ 背景画像 (任意) — src を変更するだけで差し替え可能
+  <div class="section-bg"><img class="section-bg-img" src="../shared/images/sections/team-bg.jpg" alt="" aria-hidden="true" /></div>-->
   <div class="section-inner">
     <p class="section-label">Team</p>
     <h2 class="section-title">サイエンスを支えるチーム</h2>
@@ -189,6 +196,8 @@
 
 <!-- NEWS -->
 <section id="news">
+  <!-- ▼ 背景画像 (任意) — src を変更するだけで差し替え可能
+  <div class="section-bg"><img class="section-bg-img" src="../shared/images/sections/news-bg.jpg" alt="" aria-hidden="true" /></div>-->
   <div class="section-inner">
     <p class="section-label">News</p>
     <h2 class="section-title">最新情報</h2>

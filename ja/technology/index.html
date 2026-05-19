@@ -27,7 +27,7 @@
       <li><a href="../#news">ニュース</a></li>
     </ul>
     <div style="display:flex;align-items:center;gap:12px;">
-      <a class="btn-primary" href="mailto:hello@folliceatech.com" style="font-size:13px;padding:8px 16px;">お問い合わせ</a>
+      <a class="btn-primary nav-cta" href="mailto:hello@folliceatech.com" style="font-size:13px;padding:8px 16px;white-space:nowrap;">お問い合わせ</a>
       <div class="nav-lang">
         <a class="lang-btn" href="../../en/technology/">EN</a>
         <a class="lang-btn active" href="../../ja/technology/">JP</a>
@@ -38,7 +38,11 @@
 </nav>
 
 <!-- PAGE HERO -->
-<div class="page-hero">
+<div class="page-hero has-light-bg">
+  <!-- --bg-opacity: 0〜1 で画像の濃さを調整（0=透明、1=元の濃さ）-->
+  <div class="section-bg" style="--bg-opacity: 0.50">
+    <img class="section-bg-img" src="../../shared/images/tech_fig/tech_background.png" alt="" aria-hidden="true" />
+  </div>
   <div class="page-hero-inner">
     <p class="breadcrumb"><a href="../">ホーム</a> / テクノロジー</p>
     <h1>テクノロジープラットフォーム</h1>
@@ -48,6 +52,10 @@
 
 <!-- 1. THE PROBLEM -->
 <div class="content-section">
+  <!-- ▼ 背景画像 (任意) — src を変更するだけで差し替え可能
+  <div class="section-bg">
+    <img class="section-bg-img" src="../../shared/images/sections/bg.jpg" alt="" aria-hidden="true" />
+  </div>-->
   <div class="content-inner">
     <p class="section-label">The Problem</p>
     <h2 class="section-title">不妊は依然として満たされていない医療ニーズ</h2>
@@ -81,6 +89,10 @@
 
 <!-- 2. OUR APPROACH -->
 <div class="content-section alt">
+  <!-- ▼ 背景画像 (任意) — src を変更するだけで差し替え可能
+  <div class="section-bg">
+    <img class="section-bg-img" src="../../shared/images/sections/bg.jpg" alt="" aria-hidden="true" />
+  </div>-->
   <div class="content-inner">
     <p class="section-label">Our Approach</p>
     <h2 class="section-title">計算科学が導き、実験が証明する</h2>
@@ -131,88 +143,14 @@
   </div>
 </div>
 
-
-<!--
-     3. PLATFORM PILLARS 
-    <div class="content-section">
-      <div class="content-inner">
-        <p class="section-label">Platform</p>
-        <h2 class="section-title">コアテクノロジーの柱</h2>
-        <p class="section-body">4つの技術が緊密に統合された創薬エンジン——各技術が互いを増幅し、分子仮説から臨床候補へと至る道筋を加速させます。</p>
-        <div class="platform-grid">
-          <div class="platform-card">
-            <div class="platform-card-header">
-              <div class="platform-icon icon-teal">
-                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>
-              </div>
-              <h3>インシリコ創薬</h3>
-            </div>
-            <p>独自の計算プラットフォームにより、分子ドッキングとバーチャルスクリーニングで
-            数億規模の化合物を標的タンパク質構造に対して評価します。
-            物理モデルとAI・機械学習を組み合わせ、結合親和性・選択性・ADMET特性を合成前に予測します。</p>
-            <ul>
-              <li>分子ドッキングシミュレーション</li>
-              <li>AI/MLによる結合親和性・選択性予測</li>
-              <li>低分子～中分子を対象</li>
-            </ul>
-          </div>
-          <div class="platform-card">
-            <div class="platform-card-header">
-              <div class="platform-icon icon-navy">
-                <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg>
-              </div>
-              <h3>ハイスループット自動合成</h3>
-            </div>
-            <p>計算で選定した化学構造は自動化された合成プラットフォームへ直接投入されます。
-            パラレル合成ロボットが、月間最大3,000種類/1人の候補化合物を合成。仮想候補を物理サンプルへ変換します。</p>
-            <ul>
-              <li>月間最大3,000種類のペプチド製造を一人で</li>
-              <li>構造カスタマイズに対応</li>
-              <li>HPLCによる品質確認もハイスループット化可能</li>
-            </ul>
-          </div>
-          <div class="platform-card">
-            <div class="platform-card-header">
-              <div class="platform-icon icon-teal">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
-              </div>
-              <h3>自動ロボットスクリーニング</h3>
-            </div>
-            <p>合成した化合物はそのまま自動アッセイプラットフォームへ。
-            液体ハンドリングロボット・384/1,536ウェルマイクロプレート・
-            バーコード管理された化合物ストレージが24時間365日稼働し、
-            1日あたり数十万件の再現性の高いデータを生成します。</p>
-            <ul>
-              <li>384・1,536ウェルプレートHTSフォーマット</li>
-              <li>3Dバーコードトラッキング付き液体ハンドリングロボット</li>
-              <li>24時間無人稼働</li>
-              <li>AI解析と反復フィードバック</li>
-            </ul>
-          </div>
-          <div class="platform-card">
-            <div class="platform-card-header">
-              <div class="platform-icon icon-navy">
-                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <h3>オルガノイドアッセイ</h3>
-            </div>
-            <p>優先候補は患者由来オルガノイドモデルで検証されます——疾患生理を忠実に再現する三次元組織構造体です。
-            HTS対応のオルガノイドシステムにより、臨床応答の予測精度88〜100%を示した
-            査読論文の知見をベースにした大規模な薬効評価が可能です。</p>
-            <ul>
-              <li>患者由来3D組織モデル（多臓器パネル）</li>
-              <li>臨床応答予測精度88〜100%</li>
-              <li>HTS対応マイクロウェル・PEG基板システム</li>
-              <li>マイクロ流体カプセル封入による脳オルガノイド</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  --!>
+<!-- 3. TECHNOLOGY PLATFORM -->
 
 <!-- 4. PIPELINE -->
 <div class="content-section alt">
+  <!-- ▼ 背景画像 (任意) — src を変更するだけで差し替え可能
+  <div class="section-bg">
+    <img class="section-bg-img" src="../../shared/images/sections/bg.jpg" alt="" aria-hidden="true" />
+  </div>-->
   <div class="content-inner">
     <p class="section-label">Pipeline</p>
     <h2 class="section-title">開発パイプライン</h2>
@@ -226,96 +164,9 @@
   </div>
 </div>
 
-<!-- 5. FOCUS AREAS 
-<div class="content-section">
-  <div class="content-inner">
-    <p class="section-label">Research Focus</p>
-    <h2 class="section-title">科学的注力領域</h2>
-    <p class="section-body">標的選定は、臨床的な充足されていないニーズと生物学的なアクセス可能性を軸に行います。</p>
-    <div class="focus-grid">
-      <div class="focus-card">
-        <span class="focus-tag">卵巣生物学</span>
-        <h3>卵胞形成と排卵</h3>
-        <p>卵胞の動員・発育・排卵という制御されたプロセスの理解と回復を目指します。PCOS・視床下部性無月経などの排卵障害に対応。</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">卵母細胞の質</span>
-        <h3>卵母細胞成熟と能力</h3>
-        <p>卵母細胞の減数分裂成熟とミトコンドリア機能の分子的欠陥に対処します。高齢生殖年齢患者における胚質低下という重要な未充足ニーズへの取り組み。</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">内分泌学</span>
-        <h3>ホルモン軸の調節</h3>
-        <p>現行の注射製剤ゴナドトロピン療法より高い選択性と副作用低減を実現するHPG軸の低分子モジュレーターを開発します。</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">男性不妊</span>
-        <h3>精子形成サポート</h3>
-        <p>リードプログラムは女性不妊を対象としていますが、標的低分子介入により精子形成回復が期待できる男性因子適応症の評価も進めています。</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">着床</span>
-        <h3>子宮内膜受容性</h3>
-        <p>着床ウインドウのタイミングと受容性を決定する分子メカニズムを研究します。自然妊娠・ART周期の両方における胚着床成功率の向上に貢献します。</p>
-      </div>
-      <div class="focus-card">
-        <span class="focus-tag">精密医療</span>
-        <h3>患者層別化</h3>
-        <p>治療への反応が期待できる患者サブ集団を同定するバイオマーカー戦略を開発し、臨床的有益性の最大化と規制承認を支援します。</p>
-      </div>
-    </div>
-  </div>
-</div>
--->
+<!--5. FOCUS AREAS -->
 
-
-<!-- 6. COLLABORATIONS 
-<div class="content-section alt">
-  <div class="content-inner">
-    <p class="section-label">Collaborations</p>
-    <h2 class="section-title">パートナーシップ</h2>
-    <p class="section-body">オープンな協力関係がサイエンスを加速すると考えています。アカデミア・病院・バイオテック企業との連携を積極的に進めています。</p>
-    <div class="collab-grid">
-      <div class="collab-card">
-        <div class="collab-icon">
-          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div>
-          <h4>関西医科大学・京都大学 — 共同研究</h4>
-          <p>標的検証と前臨床モデル開発に関する共同研究協定を締結。</p>
-        </div>
-      </div>
-      <div class="collab-card">
-        <div class="collab-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-        </div>
-        <div>
-          <h4>臨床アドバイザリーネットワーク</h4>
-          <p>生殖専門医・IVF専門家との対話を通じ、開発優先順位が臨床ニーズを反映するよう継続的に調整しています。</p>
-        </div>
-      </div>
-      <div class="collab-card">
-        <div class="collab-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <div>
-          <h4>新規パートナーシップを歓迎</h4>
-          <p>生殖医学研究やco-development機会に関心のあるアカデミアグループ・CRO・バイオテック企業との議論を歓迎します。</p>
-        </div>
-      </div>
-      <div class="collab-card">
-        <div class="collab-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-        </div>
-        <div>
-          <h4>産業連携</h4>
-          <p>パイプライン資産の後期co-development・ライセンス・co-promotionに向けた製薬・バイオテック企業とのパートナーシップ構築を検討中です。</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
--->
+<!-- 6. PARTNERSHIPS -->
 
 <!-- CTA -->
 <div class="cta-section">
@@ -341,7 +192,7 @@
       <li><a href="../#team">チーム</a></li>
       <li><a href="../#news">ニュース</a></li>
     </ul>
-    <p class="footer-copy">© 2025 Follicea Technologies, Inc. 京都, 日本</p>
+    <p class="footer-copy">© 2025 Follicea Technologies, Inc. 大阪, 日本</p>
   </div>
 </footer>
 
